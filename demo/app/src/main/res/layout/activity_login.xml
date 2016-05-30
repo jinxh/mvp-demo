@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/activity_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/top_bar_color">
+
+        <TextView
+            style="@style/TopTitle"
+            android:text="@string/label_login" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            style="@style/TopTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/view_margin"
+            android:text="立即注册"
+            android:textColor="@color/hint_dark"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/activity_top_bar"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/view_margin"
+            android:layout_marginRight="@dimen/view_margin"
+            android:layout_marginTop="@dimen/view_margin"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/label_mobile_validate"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/text_size_small" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding="@dimen/layout_margin">
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text_shape"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_input_mobile"
+                android:inputType="number"
+                android:paddingLeft="@dimen/type_margin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_dark"
+                android:textSize="@dimen/text_size_small" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="@dimen/view_margin"
+            android:padding="@dimen/layout_margin">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/touch_view_min_height"
+                android:background="@drawable/edit_text_shape"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_input_password"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/type_margin"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_dark"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/touch_view_min_height"
+        android:layout_below="@id/ll_login"
+        android:layout_margin="@dimen/view_margin"
+        android:background="@drawable/login_shape"
+        android:text="@string/label_use_mobile_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:id="@+id/tv_forget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="@dimen/view_margin"
+        android:gravity="center"
+        android:text="忘记密码?"
+        android:textColor="@color/hint_dark"
+        android:textSize="@dimen/text_size_small" />
+</RelativeLayout>

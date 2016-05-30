@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer-array name="google_colors">
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+    </integer-array>
+
+    <string-array name="car_type">
+        <item>请选择车型</item>
+        <item>微面</item>
+        <item>微货</item>
+        <item>小货</item>
+        <item>中货</item>
+        <item>中卡</item>
+        <item>重卡</item>
+    </string-array>
+    <string-array name="car_length">
+        <item>请选择长度</item>
+        <item>3.1</item>
+        <item>4.2</item>
+        <item>5.2</item>
+        <item>6.8</item>
+        <item>9.6</item>
+    </string-array>
+    <string-array name="car_weight">
+        <item>请选载重范围</item>
+        <item>0.5</item>
+        <item>1.0</item>
+        <item>2.0</item>
+        <item>5.0</item>
+        <item>10.0</item>
+        <item>20.0</item>
+    </string-array>
+    <string-array name="car_volume">
+        <item>请选体积范围</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>
+
+</resources>

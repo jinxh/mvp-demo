@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="view_margin">8dp</dimen>
+    <dimen name="type_margin">4dp</dimen>
+    <dimen name="top_bar_height">48dp</dimen>
+    <dimen name="touch_view_min_height">48dp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="divider_height">1px</dimen>
+    <dimen name="layout_margin">8dp</dimen>
+    <dimen name="indicator_width">5dp</dimen>
+    <dimen name="indicator_margin">2dp</dimen>
+
+</resources>

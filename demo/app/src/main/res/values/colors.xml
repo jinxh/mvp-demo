@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="action_bar_color">#ff0d0d0d</color>
+    <color name="default_status_bar_color">#ff99cc00</color>
+    <color name="bar_tab_text_default_color">#b9b9b9</color>
+    <color name="bar_tab_text_select_color">#ffffffff</color>
+    <color name="psts_background_tab_pressed">#1AFFFFFF</color>
+    <color name="psts_background_tab_pressed_ripple">#AAFFFFFF</color>
+
+    <color name="app_red">#FFC93437</color>
+    <color name="app_red_transparent">#e0C93437</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark">#666666</color>
+    <color name="hint_dark">#BFBFBF</color>
+    <color name="my_blue">#00A0E9</color>
+    <color name="top_bar_color">#f5f5f7</color>
+
+    <color name="orange">#FF6100</color>
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+    <color name="activity_bg">#aaa</color>
+    <color name="text_red">#9e0400</color>
+
+    <!-- See through -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Black -->
+    <color name="black">#242424</color>
+    <color name="divider_color">#12ffffff</color>
+    <!-- White -->
+    <color name="white">#ffffffff</color>
+
+
+    <color name="transparent_half">#e0000000</color>
+    <!-- Transparent black -->
+    <color name="transparent_black">#20000000</color>
+
+    <!-- Transparent black -->
+    <color name="low_black">#19283d</color>
+
+    <!-- Transparent white -->
+    <color name="transparent_white">#ffcccccc</color>
+
+    <!-- Dark transparent color -->
+    <color name="list_item_background">#c1000000</color>
+
+    <!-- A light, Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+
+    <!-- A light, transparent Holo shade of blue -->
+    <color name="holo_blue_light_transparent">#9933b5e5</color>
+
+    <color name="holo_green_light">#ff99cc00</color>
+
+    <!-- A light Holo shade of green -->
+
+
+    <!-- A dark Holo shade of green -->
+    <color name="holo_green_dark">#ff669900</color>
+
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="background">#eeeeee</color>
+</resources>

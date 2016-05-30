@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="alert_net_error">网络异常,请重试。</string>
+    <string name="alert_no_mobile">请输入正确的手机号</string>
+    <string name="alert_null_mobile">请输入手机号</string>
+    <string name="alert_null_password">请输入密码</string>
+    <string name="label_login">登录</string>
+    <string name="label_register">注册</string>
+    <string name="label_mobile_validate">输入手机号码登录</string>
+    <string name="label_use_mobile_login">登录</string>
+    <string name="hint_input_mobile">请输入你的手机号</string>
+    <string name="hint_input_password">请输入密码</string>
+    <string name="hint_input_verification_code">请输入短信验证码</string>
+    <string name="load_more_text">正在加载</string>
+
+</resources>
