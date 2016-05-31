@@ -1,6 +1,9 @@
 package com.jinxh.demo.model.api;
 
+
 import com.jinxh.demo.model.bean.HttpBean;
+
+import java.net.UnknownHostException;
 
 import retrofit2.adapter.rxjava.HttpException;
 import rx.Subscriber;
@@ -8,13 +11,12 @@ import rx.Subscriber;
 /**
  * Created by jinxh on 16/5/30.
  */
-public class BaseSubscriber<T> extends Subscriber<HttpBean<T>> {
+public class ApiSubscriber<T> extends Subscriber<HttpBean<T>> {
 
     public static int UNKNOWN_CODE = -1;
-    public static int API_ERROR = -2;
     private ApiCallBack<T> apiCallback;
 
-    public BaseSubscriber(ApiCallBack<T> apiCallback) {
+    public ApiSubscriber(ApiCallBack<T> apiCallback) {
         this.apiCallback = apiCallback;
     }
 
@@ -31,21 +33,14 @@ public class BaseSubscriber<T> extends Subscriber<HttpBean<T>> {
 
     @Override
     public void onError(Throwable e) {
-        if (e instanceof HttpException) {
-            HttpException httpException = (HttpException) e;
-            e.printStackTrace();
-            int code = httpException.code();
-            String msg = httpException.getMessage();
-            if (code == 504) {
-                msg = "网络不给力";
-            }
-            apiCallback.onFailure(code, msg);
+        e.printStackTrace();
+        if (e instanceof HttpException || e instanceof UnknownHostException) {
+            apiCallback.onFailure(UNKNOWN_CODE, "网络异常,请重试。");
         } else {
             apiCallback.onFailure(UNKNOWN_CODE, e.getMessage());
         }
         apiCallback.onCompleted();
     }
-
     @Override
     public void onNext(HttpBean<T> httpBean) {
         if (httpBean.isSuccess()) {

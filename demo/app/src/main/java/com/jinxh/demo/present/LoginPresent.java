@@ -8,7 +8,7 @@ import com.jinxh.demo.base.BasePresent;
 import com.jinxh.demo.model.api.APIService;
 import com.jinxh.demo.model.api.ApiCallBack;
 import com.jinxh.demo.model.api.RetrofitClient;
-import com.jinxh.demo.model.api.BaseSubscriber;
+import com.jinxh.demo.model.api.ApiSubscriber;
 import com.jinxh.demo.model.bean.UserInfo;
 import com.jinxh.demo.ui.activity.LoginActivity;
 import com.jinxh.demo.utils.FormatCheckUtils;
@@ -35,7 +35,7 @@ public class LoginPresent extends BasePresent<LoginActivity> {
 
 
         mCurrentView.showLoading();
-        addIOSubscription(RetrofitClient.builderRetrofit().create(APIService.class).login(mobileNo, password),new BaseSubscriber<>(new ApiCallBack<UserInfo>() {
+        addIOSubscription(RetrofitClient.builderRetrofit().create(APIService.class).login(mobileNo, password),new ApiSubscriber<>(new ApiCallBack<UserInfo>() {
             @Override
             public void onSuccess(UserInfo model) {
                 mCurrentView.loginSuccess();

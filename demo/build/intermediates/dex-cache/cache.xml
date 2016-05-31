@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/libs/ormlite-android-4.49-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ecfae85e17f2472852fa8298952f9d52f6a6bfa4">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/ormlite-android-4.49-SNAPSHOT-f2b7c9fd36f564017b7b7535da570191d3c14833.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.0/748f0546d5c3c27f1aef07270ffea0c45f0c42a4/rxjava-1.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/rxjava-1.1.0-b807c05a297a4568b7bf7639881a2dd02f396093.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-4273046dc1d41ea9e468e5356bbb29ca18af218f.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding/0.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="023a79c3bbea624387e820cb2b4d5c6ba774903c">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-38b2173c51f5831d832954194104d5f087c21e71.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/glide-3.6.1-e8e2dfc3002f95ca48f02c7a61de2618df506015.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-4ba6b968ea38af5aa320fa7c9be6cbebd4df4bbc.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-2ad1ec9bf8d6ce534a93bc88235827bfd24d6950.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/libs/ormlite-core-4.49-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="9a8b276da6dada8141f614d3feba25a0e8589db7">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/ormlite-core-4.49-SNAPSHOT-7d1b7620ce7f6feb1107d88cffbd8058cd5896c9.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-6c7199552f37fdd3858ff18b24eecfe3ddc4d49f.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.1.2/7052283359001bb108753cb0583a887d3bf94c82/okhttp-3.1.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7052283359001bb108753cb0583a887d3bf94c82">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/okhttp-3.1.2-7a092559419ab1f8a38d38b6b3cb2b9497b01e6a.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/in.srain.cube/ultra-ptr/1.0.11/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a0bdf70123d26dd83d8462d602b3a83a41934cf6">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-daba3e6145ecbc70b8e59a37563958e9a0c9db27.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.github.orhanobut/logger/1.12/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ecb9f39f775f414b18c7c61b4f71345f2ae8f738">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-396f7d408040b74e759b600b1ecbb81dcf05aa2e.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/de5935a367ba5e343e9df786ac8fc0c7d52b5f0c/converter-gson-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta4-e9339158a3f9488edeee3ae03c38bb5d474d3092.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.soundcloud.android/android-crop/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="11a65cf2b30c192b38a881d626fa771a78a2293d">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-37118d20b09b5c8188beba1b15c000ebe5b4675a.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/cat.ereza/customactivityoncrash/1.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="731adea82d8271cde9385de2dc01e3c8ed231570">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-fc1862182c4fd1c4031ec97b0a2ff2f0e7953ad5.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-f85b5f88acab6adb7e92b3f8203f594cf6edf116.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.systembartint/systembartint/1.0.3/de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287/systembartint-1.0.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/systembartint-1.0.3-095c7c4262e99b1ef52f99a4febd92fa194bebf1.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.0-beta4/739e00dea1f0ac04fdb9b6160d667e23cc50a791/retrofit-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta4-97842a7e7121d2f8de8ca02df7644f4e5c7a5ea6.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-d4af85ba21198a85fbdf5c95a20de724cb4c86e4.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.0-beta4/bd49baf667542c7d06f71e598bdee7fe57272013/adapter-rxjava-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bd49baf667542c7d06f71e598bdee7fe57272013">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.0-beta4-a9a2587bd63c3601ab6a58ca138ed2d4b3f19c36.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.1.2/a1b4b8e4dc5f7bfa9186e79f9e267c1539a847b0/logging-interceptor-3.1.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a1b4b8e4dc5f7bfa9186e79f9e267c1539a847b0">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/logging-interceptor-3.1.2-12ac71337140c091d0661e66726944a61c6b9c4d.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/okio-1.6.0-b484a353e9cc451aa0a0c0edd900127e90c4d7ce.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-7553a7553afd847273e263b97a35bac7ad338272.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.lsjwzh/materialloadingprogressbar/0.5.8-RELEASE/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="02a43b4e0f1fc04fd60a3de8f6d5015d93703b3e">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-51d054cb749adb3ef3e04e69998c1718b007be91.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/android-mvp/demo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/classes-8fe1d182ad67f46ede453bf378a3a06de6ea3121.jar" />
+    </item>
+    <item
+        jar="/Users/jinxh/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/jinxh/android-mvp/demo/app/build/intermediates/pre-dexed/debug/gson-2.4-1ed6c6e1576bac160f840ce673a30f4c7973858a.jar" />
+    </item>
+
+</items>
