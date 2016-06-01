@@ -144,22 +144,6 @@ public class ViewHolder {
         return this;
     }
 
-    /**
-     * 为ImageView设置图片
-     *
-     * @param viewId
-     * @return
-     */
-    public ViewHolder setImageByUrl(int viewId, String url) {
-        ImageView view = getView(viewId);
-        Glide.with(mContext).load(url)
-                .crossFade()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.color.activity_bg)
-                .into(view);
-        return this;
-    }
-
     public int getPosition() {
         return mPosition;
     }

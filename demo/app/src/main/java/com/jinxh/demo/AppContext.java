@@ -21,10 +21,10 @@ public class AppContext extends Application {
         super.onCreate();
         // 捕捉应用异常信息
         CustomActivityOnCrash.install(this);
-        initConstance();
+        initConstant();
     }
 
-    private void initConstance() {
+    private void initConstant() {
         NET_ERROR_MSG = getString(R.string.alert_net_error);
     }
 }
