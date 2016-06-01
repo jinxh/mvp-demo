@@ -11,6 +11,8 @@ import cat.ereza.customactivityoncrash.CustomActivityOnCrash;
  */
 public class AppContext extends Application {
 
+    public final static String API_BASE_URL = "http://appgd.futao.me:80/fastorder/";
+    public static String NET_ERROR_MSG;
 
     @Override
     public void onCreate() {
@@ -18,7 +20,10 @@ public class AppContext extends Application {
 
         // 捕捉应用异常信息
         CustomActivityOnCrash.install(this);
-
+        initConstance();
     }
 
+    private void initConstance() {
+        NET_ERROR_MSG = getString(R.string.alert_net_error);
+    }
 }

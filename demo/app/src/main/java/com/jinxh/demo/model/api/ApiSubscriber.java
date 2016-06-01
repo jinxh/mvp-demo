@@ -1,7 +1,8 @@
 package com.jinxh.demo.model.api;
 
 
-import com.jinxh.demo.model.bean.HttpBean;
+import com.jinxh.demo.AppContext;
+import com.jinxh.demo.model.bean.ResponseBean;
 
 import java.net.UnknownHostException;
 
@@ -11,7 +12,7 @@ import rx.Subscriber;
 /**
  * Created by jinxh on 16/5/30.
  */
-public class ApiSubscriber<T> extends Subscriber<HttpBean<T>> {
+public class ApiSubscriber<T> extends Subscriber<ResponseBean<T>> {
 
     public static int UNKNOWN_CODE = -1;
     private ApiCallBack<T> apiCallback;
@@ -35,14 +36,14 @@ public class ApiSubscriber<T> extends Subscriber<HttpBean<T>> {
     public void onError(Throwable e) {
         e.printStackTrace();
         if (e instanceof HttpException || e instanceof UnknownHostException) {
-            apiCallback.onFailure(UNKNOWN_CODE, "网络异常,请重试。");
+            apiCallback.onFailure(UNKNOWN_CODE, AppContext.NET_ERROR_MSG);
         } else {
             apiCallback.onFailure(UNKNOWN_CODE, e.getMessage());
         }
         apiCallback.onCompleted();
     }
     @Override
-    public void onNext(HttpBean<T> httpBean) {
+    public void onNext(ResponseBean<T> httpBean) {
         if (httpBean.isSuccess()) {
             apiCallback.onSuccess(httpBean.getBody());
         } else {

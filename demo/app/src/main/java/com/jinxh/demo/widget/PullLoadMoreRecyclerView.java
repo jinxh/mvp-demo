@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.jinxh.demo.R;
 
@@ -58,7 +57,6 @@ public class PullLoadMoreRecyclerView extends LinearLayout {
         mRecyclerView.setOnTouchListener(new onTouchRecyclerView());
 
         mFooterView = view.findViewById(R.id.footerView);
-//        loadMoreText = (TextView) view.findViewById(R.id.loadMoreText);
         mFooterView.setVisibility(View.GONE);
         this.addView(view);
 
@@ -154,9 +152,6 @@ public class PullLoadMoreRecyclerView extends LinearLayout {
 
     }
 
-    /**
-     * Solve IndexOutOfBoundsException exception
-     */
     public class onTouchRecyclerView implements OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -175,14 +170,6 @@ public class PullLoadMoreRecyclerView extends LinearLayout {
     public void setPushRefreshEnable(boolean pushRefreshEnable) {
         this.pushRefreshEnable = pushRefreshEnable;
     }
-
-//    public void setFooterViewText(CharSequence text) {
-//        loadMoreText.setText(text);
-//    }
-//
-//    public void setFooterViewText(int resid) {
-//        loadMoreText.setText(resid);
-//    }
 
     public void refresh() {
         if (mPullLoadMoreListener != null) {

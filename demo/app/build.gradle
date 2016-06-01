@@ -66,12 +66,10 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxjava:1.1.0'
     compile 'com.jakewharton.rxbinding:rxbinding:0.3.0'// 控件rx
-    compile 'in.srain.cube:ultra-ptr:1.0.11'// 下拉刷新
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
     compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
-    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
-    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'// progress
     compile 'com.android.support:support-v4:23.1.1'
 }

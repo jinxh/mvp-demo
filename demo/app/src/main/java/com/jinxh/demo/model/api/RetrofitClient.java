@@ -1,6 +1,6 @@
 package com.jinxh.demo.model.api;
 
-import com.jinxh.demo.BaseConfig;
+import com.jinxh.demo.AppContext;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -27,7 +27,7 @@ public class RetrofitClient {
             httpClient.addInterceptor(logging);
 
             mRetrofit = new Retrofit.Builder()
-                    .baseUrl(BaseConfig.API_BASE_URL)
+                    .baseUrl(AppContext.API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .client(httpClient.build())
