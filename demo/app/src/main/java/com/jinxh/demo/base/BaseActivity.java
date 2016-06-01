@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.jinxh.demo.AppContext;
 import com.jinxh.demo.R;
 import com.jinxh.demo.widget.LoadingDialog;
 import com.jakewharton.rxbinding.view.RxView;
@@ -27,15 +28,14 @@ import rx.subscriptions.CompositeSubscription;
  * QQ:123489504
  */
 public abstract class BaseActivity extends AppCompatActivity {
-    protected Activity mActivity;
     private SystemBarTintManager mTintManager;
-
+    private LoadingDialog mLoadingDialog;
+    private CompositeSubscription mCompositeSubscription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
-        mActivity = this;
         if (isHiddenStatusBar()) {
             initBarTint();
             initTopBar();
@@ -46,7 +46,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected boolean isHiddenStatusBar() {
-        return true;
+        return AppContext.HIDDEN_STATUS_BAR;
     }
 
     @Override
@@ -89,7 +89,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         RxView.clicks(view).throttleFirst(500, TimeUnit.MILLISECONDS);
     }
 
-    private LoadingDialog mLoadingDialog;
+    protected void setOnClickThrottleFirst(View view) {
+        // 快速点击
+        RxView.clicks(view).throttleFirst(500, TimeUnit.MILLISECONDS);
+    }
 
     public void showLoading() {
         if (mLoadingDialog == null) {
@@ -141,6 +144,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    protected void addSubscription(Subscription subscription) {
+        if (mCompositeSubscription == null) {
+            mCompositeSubscription = new CompositeSubscription();
+        }
+        mCompositeSubscription.add(subscription);
+    }
+
     @TargetApi(19)
     private void setTranslucentStatus(Window window) {
         WindowManager.LayoutParams winParams = window.getAttributes();
@@ -155,10 +165,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public void showMessage(CharSequence text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-    }
-
-    public void showNetError() {
-        Toast.makeText(this, R.string.alert_net_error, Toast.LENGTH_SHORT).show();
     }
 
     protected void setTintResource(int res) {

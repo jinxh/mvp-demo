@@ -57,7 +57,7 @@ public class LoginActivity extends MvpActivity<LoginPresent> implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login:
-                presenter.login(mEtMobile.getText().toString(), mEtPassword.getText().toString());
+                mPresenter.login(mEtMobile.getText().toString(), mEtPassword.getText().toString());
                 break;
             case R.id.tv_register:
                 break;

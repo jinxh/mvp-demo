@@ -26,15 +26,15 @@ public class LoginPresent extends BasePresent<LoginActivity> {
 
     public void login(final String mobileNo, String password) {
         if (TextUtils.isEmpty(mobileNo)) {
-            mCurrentView.showMessage(R.string.alert_null_mobile);
+            mMvpView.showMessage(R.string.alert_null_mobile);
             return;
         }
         if (TextUtils.isEmpty(password)) {
-            mCurrentView.showMessage(R.string.alert_null_password);
+            mMvpView.showMessage(R.string.alert_null_password);
             return;
         }
         if (!FormatCheckUtils.checkMobileNumberValid(mobileNo)) {
-            mCurrentView.showMessage(R.string.alert_no_mobile);
+            mMvpView.showMessage(R.string.alert_no_mobile);
             return;
         }
 
@@ -52,22 +52,22 @@ public class LoginPresent extends BasePresent<LoginActivity> {
             @Override
             public void onStart() {
                 super.onStart();
-                mCurrentView.showLoading();
+                mMvpView.showLoading();
             }
 
             @Override
             public void onSuccess(UserInfo model) {
-                mCurrentView.loginSuccess();
+                mMvpView.loginSuccess();
             }
 
             @Override
             public void onFailure(int code, String msg) {
-                mCurrentView.showMessage(msg);
+                mMvpView.showMessage(msg);
             }
 
             @Override
             public void onCompleted() {
-                mCurrentView.dismissLoading();
+                mMvpView.dismissLoading();
             }
         }));
     }

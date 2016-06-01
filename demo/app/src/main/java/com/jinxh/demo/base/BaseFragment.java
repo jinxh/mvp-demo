@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.jakewharton.rxbinding.view.RxView;
+import com.jinxh.demo.AppContext;
 import com.jinxh.demo.R;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
@@ -33,8 +34,9 @@ public abstract class BaseFragment extends Fragment implements View.OnTouchListe
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mCompositeSubscription = new CompositeSubscription();
-//        initTopBar(mRootView);
+        if(isHiddenStatusBar()){
+            initTopBar(mRootView);
+        }
         initData();
         initEvent();
         initView();
@@ -64,9 +66,6 @@ public abstract class BaseFragment extends Fragment implements View.OnTouchListe
         Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
-    public void showNetError() {
-        Toast.makeText(getContext(), R.string.alert_net_error, Toast.LENGTH_SHORT).show();
-    }
 
     public void showLoading() {
         ((BaseActivity) getActivity()).showLoading();
@@ -107,6 +106,10 @@ public abstract class BaseFragment extends Fragment implements View.OnTouchListe
         super.onDestroy();
     }
 
+
+    protected boolean isHiddenStatusBar() {
+        return AppContext.HIDDEN_STATUS_BAR;
+    }
     private void initTopBar(View view) {
         // 4.4以上设置头部导航高度
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -122,6 +125,11 @@ public abstract class BaseFragment extends Fragment implements View.OnTouchListe
             topBar.getLayoutParams().height = statusBarHeight + height;
         }
     }
+    protected void setOnClickThrottleFirst(View view) {
+        // 快速点击
+        RxView.clicks(view).throttleFirst(500, TimeUnit.MILLISECONDS);
+    }
+
 
     @Override
     public void onViewStateRestored(Bundle savedInstanceState) {

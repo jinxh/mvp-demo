@@ -7,13 +7,13 @@ import android.os.Bundle;
  * QQ:123489504
  */
 public abstract class MvpActivity<P extends BasePresent> extends BaseActivity implements MvpView {
-    protected P presenter;
+    protected P mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        presenter = createPresenter();
-        if (presenter != null) {
-            presenter.attachView(this);
+        mPresenter = createPresenter();
+        if (mPresenter != null) {
+            mPresenter.attachView(this);
         }
         super.onCreate(savedInstanceState);
     }
@@ -23,8 +23,8 @@ public abstract class MvpActivity<P extends BasePresent> extends BaseActivity im
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (presenter != null) {
-            presenter.detachView(false);
+        if (mPresenter != null) {
+            mPresenter.detachView(false);
         }
     }
 }

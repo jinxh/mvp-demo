@@ -12,13 +12,13 @@ import rx.subscriptions.CompositeSubscription;
  */
 public abstract class BasePresent<V extends MvpView> {
 
-    protected V mCurrentView;
+    protected V mMvpView;
 
     protected CompositeSubscription mCompositeSubscription;
 
     protected void attachView(V view) {
         mCompositeSubscription = new CompositeSubscription();
-        mCurrentView = view;
+        mMvpView = view;
     }
 
     protected void detachView(boolean retainInstance) {
