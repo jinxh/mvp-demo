@@ -1,9 +1,7 @@
 package com.jinxh.demo.present;
 
-import android.text.TextUtils;
 
 
-import com.jinxh.demo.R;
 import com.jinxh.demo.base.BasePresent;
 import com.jinxh.demo.model.api.APIService;
 import com.jinxh.demo.model.api.ApiCallBack;
@@ -12,7 +10,6 @@ import com.jinxh.demo.model.api.ApiSubscriber;
 import com.jinxh.demo.model.bean.ResponseBean;
 import com.jinxh.demo.model.bean.UserInfo;
 import com.jinxh.demo.ui.activity.LoginActivity;
-import com.jinxh.demo.utils.FormatCheckUtils;
 
 import rx.Observable;
 import rx.functions.Action1;
@@ -23,21 +20,7 @@ import rx.schedulers.Schedulers;
  */
 public class LoginPresent extends BasePresent<LoginActivity> {
 
-
     public void login(final String mobileNo, String password) {
-        if (TextUtils.isEmpty(mobileNo)) {
-            mMvpView.showMessage(R.string.alert_null_mobile);
-            return;
-        }
-        if (TextUtils.isEmpty(password)) {
-            mMvpView.showMessage(R.string.alert_null_password);
-            return;
-        }
-        if (!FormatCheckUtils.checkMobileNumberValid(mobileNo)) {
-            mMvpView.showMessage(R.string.alert_no_mobile);
-            return;
-        }
-
         Observable<ResponseBean<UserInfo>> observable = RetrofitClient.builderRetrofit().create(APIService.class).login(mobileNo, password);
         observable.observeOn(Schedulers.io())
                 .doOnNext(new Action1<ResponseBean<UserInfo>>() {
@@ -52,22 +35,30 @@ public class LoginPresent extends BasePresent<LoginActivity> {
             @Override
             public void onStart() {
                 super.onStart();
-                mMvpView.showLoading();
+                if (getView() != null) {
+                    getView().showLoading();
+                }
             }
 
             @Override
             public void onSuccess(UserInfo model) {
-                mMvpView.loginSuccess();
+                if (getView() != null) {
+                    getView().loginSuccess();
+                }
             }
 
             @Override
             public void onFailure(int code, String msg) {
-                mMvpView.showMessage(msg);
+                if (getView() != null) {
+                    getView().showMessage(msg);
+                }
             }
 
             @Override
             public void onCompleted() {
-                mMvpView.dismissLoading();
+                if (getView() != null) {
+                    getView().dismissLoading();
+                }
             }
         }));
     }

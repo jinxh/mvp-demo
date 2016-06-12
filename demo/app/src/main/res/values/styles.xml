@@ -15,24 +15,6 @@
 
     </style>
 
-    <style name="NewsTitle">
-        <item name="android:textColor">@android:color/darker_gray</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:gravity">center</item>
-    </style>
-
-    <style name="MainTabText">
-        <item name="android:textColor">@android:color/darker_gray</item>
-        <item name="android:textSize">@dimen/text_size_micro</item>
-        <item name="android:gravity">top|center_horizontal</item>
-    </style>
-
-    <style name="NewsItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/layout_margin</item>
-    </style>
-
     <style name="TopTitle">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">@dimen/text_size_medium</item>

@@ -3,6 +3,8 @@ package com.jinxh.demo.base;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jinxh.demo.mvp.MvpView;
+
 /**
  * Created by jinxh on 16/1/4.
  */

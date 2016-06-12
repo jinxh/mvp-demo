@@ -1,5 +1,6 @@
 package com.jinxh.demo.ui.activity;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,6 +10,7 @@ import com.jinxh.demo.R;
 import com.jinxh.demo.base.MvpActivity;
 import com.jinxh.demo.present.LoginPresent;
 import com.jinxh.demo.model.PreferenceUtils;
+import com.jinxh.demo.utils.FormatCheckUtils;
 
 import butterknife.Bind;
 
@@ -57,6 +59,18 @@ public class LoginActivity extends MvpActivity<LoginPresent> implements View.OnC
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login:
+                if (TextUtils.isEmpty(mEtMobile.getText().toString())) {
+                    showMessage(R.string.alert_null_mobile);
+                    return;
+                }
+                if (TextUtils.isEmpty(mEtPassword.getText().toString())) {
+                    showMessage(R.string.alert_null_password);
+                    return;
+                }
+                if (!FormatCheckUtils.checkMobileNumberValid(mEtMobile.getText().toString())) {
+                    showMessage(R.string.alert_no_mobile);
+                    return;
+                }
                 mPresenter.login(mEtMobile.getText().toString(), mEtPassword.getText().toString());
                 break;
             case R.id.tv_register:

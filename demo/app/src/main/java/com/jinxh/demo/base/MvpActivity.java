@@ -2,6 +2,8 @@ package com.jinxh.demo.base;
 
 import android.os.Bundle;
 
+import com.jinxh.demo.mvp.MvpView;
+
 /**
  * Created by jinxh on 16/1/4.
  * QQ:123489504

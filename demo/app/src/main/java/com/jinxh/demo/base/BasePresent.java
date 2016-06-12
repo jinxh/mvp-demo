@@ -1,5 +1,9 @@
 package com.jinxh.demo.base;
 
+import com.jinxh.demo.mvp.MvpBasePresenter;
+import com.jinxh.demo.mvp.MvpPresenter;
+import com.jinxh.demo.mvp.MvpView;
+
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
@@ -10,29 +14,8 @@ import rx.subscriptions.CompositeSubscription;
 /**
  * Created by jinxh on 16/1/28.
  */
-public abstract class BasePresent<V extends MvpView> {
-
-    protected V mMvpView;
-
+public class BasePresent<V extends MvpView> extends MvpBasePresenter<V> {
     protected CompositeSubscription mCompositeSubscription;
-
-    protected void attachView(V view) {
-        mCompositeSubscription = new CompositeSubscription();
-        mMvpView = view;
-    }
-
-    protected void detachView(boolean retainInstance) {
-        if (mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
-            mCompositeSubscription.unsubscribe();
-        }
-    }
-
-    protected void addSubscription(Subscription subscription) {
-        if (mCompositeSubscription == null) {
-            mCompositeSubscription = new CompositeSubscription();
-        }
-        mCompositeSubscription.add(subscription);
-    }
 
     protected void addIOSubscription(Observable observable, Subscriber subscriber) {
         if (mCompositeSubscription == null) {
