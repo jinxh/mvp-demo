@@ -1,7 +1,5 @@
 package com.jinxh.demo.present;
 
-
-
 import com.jinxh.demo.base.BasePresent;
 import com.jinxh.demo.model.api.APIService;
 import com.jinxh.demo.model.api.ApiCallBack;
