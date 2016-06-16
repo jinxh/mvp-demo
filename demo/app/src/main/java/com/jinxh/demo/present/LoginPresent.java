@@ -7,7 +7,7 @@ import com.jinxh.demo.model.api.RetrofitClient;
 import com.jinxh.demo.model.api.ApiSubscriber;
 import com.jinxh.demo.model.bean.ResponseBean;
 import com.jinxh.demo.model.bean.UserInfo;
-import com.jinxh.demo.ui.activity.LoginActivity;
+import com.jinxh.demo.ui.activity.LoginView;
 
 import rx.Observable;
 import rx.functions.Action1;
@@ -16,7 +16,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by jinxh on 16/2/1.
  */
-public class LoginPresent extends BasePresent<LoginActivity> {
+public class LoginPresent extends BasePresent<LoginView> {
 
     public void login(final String mobileNo, String password) {
         Observable<ResponseBean<UserInfo>> observable = RetrofitClient.builderRetrofit().create(APIService.class).login(mobileNo, password);
@@ -25,11 +25,14 @@ public class LoginPresent extends BasePresent<LoginActivity> {
                     @Override
                     public void call(ResponseBean<UserInfo> userInfoHttpBean) {
                         if (userInfoHttpBean.isSuccess()) {
-                            // TODO 保存用户信息
+                            // 保存用户信息
+                            if (getView() != null) {
+                                getView().saveUserInfo(userInfoHttpBean.getBody());
+                            }
                         }
                     }
                 });
-        addIOSubscription(observable, new ApiSubscriber<>(new ApiCallBack<UserInfo>() {
+        addIOSubscription(observable, new ApiSubscriber(new ApiCallBack<UserInfo>() {
             @Override
             public void onStart() {
                 super.onStart();

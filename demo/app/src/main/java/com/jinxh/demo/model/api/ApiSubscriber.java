@@ -15,9 +15,9 @@ import rx.Subscriber;
 public class ApiSubscriber<T> extends Subscriber<ResponseBean<T>> {
 
     public static int UNKNOWN_CODE = -1;
-    private ApiCallBack<T> apiCallback;
+    private ApiCallBack apiCallback;
 
-    public ApiSubscriber(ApiCallBack<T> apiCallback) {
+    public ApiSubscriber(ApiCallBack apiCallback) {
         this.apiCallback = apiCallback;
     }
 

@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.jinxh.demo.R;
 import com.jinxh.demo.base.MvpActivity;
+import com.jinxh.demo.model.bean.UserInfo;
 import com.jinxh.demo.present.LoginPresent;
 import com.jinxh.demo.model.PreferenceUtils;
 import com.jinxh.demo.utils.FormatCheckUtils;
@@ -17,7 +18,7 @@ import butterknife.Bind;
 /**
  * Created by jinxh on 16/2/1.
  */
-public class LoginActivity extends MvpActivity<LoginPresent> implements View.OnClickListener {
+public class LoginActivity extends MvpActivity<LoginPresent> implements View.OnClickListener ,LoginView{
     @Bind(R.id.btn_login)
     Button mBtnLogin;
     @Bind(R.id.et_mobile)
@@ -81,5 +82,10 @@ public class LoginActivity extends MvpActivity<LoginPresent> implements View.OnC
     public void loginSuccess() {
         // TODO
         showMessage("登陆成功");
+    }
+
+    @Override
+    public void saveUserInfo(UserInfo userInfo) {
+
     }
 }

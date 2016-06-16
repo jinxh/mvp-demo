@@ -27,10 +27,11 @@ import rx.subscriptions.CompositeSubscription;
  * Created by jinxh on 16/1/4.
  * QQ:123489504
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity{
     private SystemBarTintManager mTintManager;
     private LoadingDialog mLoadingDialog;
     private CompositeSubscription mCompositeSubscription;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,8 +54,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-
+        if (mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            mCompositeSubscription.unsubscribe();
+        }
     }
+
     @Override
     protected void onResume() {
         super.onResume();

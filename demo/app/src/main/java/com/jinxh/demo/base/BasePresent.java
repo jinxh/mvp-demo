@@ -25,4 +25,12 @@ public class BasePresent<V extends MvpView> extends MvpBasePresenter<V> {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber));
     }
+
+    @Override
+    public void detachView(boolean retainInstance) {
+        super.detachView(retainInstance);
+        if (mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+            mCompositeSubscription.unsubscribe();
+        }
+    }
 }
